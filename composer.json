@@ -1,0 +1,39 @@
+{
+    "name": "mnastalski/allegro-socialite",
+    "description": "Allegro OAuth2 Provider for Laravel Socialite",
+    "keywords": [
+        "laravel",
+        "oauth",
+        "provider",
+        "socialite",
+        "allegro"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mateusz Nastalski",
+            "homepage": "https://nastalski.pl"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "laravel/socialite": "^5.0",
+        "illuminate/support": ">=6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Allegro\\Socialite\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Allegro\\Socialite\\AllegroSocialiteServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
