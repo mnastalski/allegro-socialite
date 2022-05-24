@@ -44,3 +44,23 @@ $provider->getAccessToken();
 ```
 
 For `$provider->user()` to work the `allegro:api:profile:read` permission must be granted.
+
+### Refreshing the access token:
+
+```php
+Socialite::driver('allegro')->getRefreshTokenResponse($refreshToken);
+```
+
+Example response:
+
+```php
+[
+    'access_token' => '...',
+    'token_type' => 'bearer',
+    'refresh_token' => '...',
+    'expires_in' => 43199,
+    'scope' => 'allegro:api:profile:read',
+    'allegro_api' => true,
+    'jti' => '...',
+]
+```
