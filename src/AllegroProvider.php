@@ -68,7 +68,7 @@ class AllegroProvider extends AbstractProvider
      * @param string $refreshToken
      * @return array
      */
-    public function getRefreshTokenResponse(string $refreshToken)
+    public function getRefreshTokenResponse(string $refreshToken): array
     {
         $response = $this->getHttpClient()->post($this->getTokenUrl(), [
             RequestOptions::HEADERS => [
